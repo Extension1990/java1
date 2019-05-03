@@ -1,26 +1,56 @@
 package com.jetbrains;
 
-public class Student {
-    private String name, course;
-    private int studentID;
+public class Student extends Person {
 
-    // This is the constructor of the class Student
-    public Student(String name, String course, int studentID) {
+    int stuNum;
+    int stipend;
+    int recess;
 
-        this.name = name;
-        this.course = course;
-        this.studentID = studentID;
+    // Student constructor
+    public Student(int id, int age, String name, String surname, int stuNum, int stipend, int recess) {
+        super(id, age, name, surname);
+
+        // Initialize sub_class variables
+        this.stuNum = stuNum;
+        this.stipend = stipend;
+        this.recess = recess;
     }
 
-    public String getName() {
-        return name;
+    // Get student number
+    public int getStuNum(){
+        return stuNum;
     }
 
-    public String getCourse() {
-        return course;
+    // Get stipent
+    public int getStipend(){
+        return stipend;
     }
 
-    public int getStudentID(){
-        return studentID;
+    // Get recess
+    public int getRecess(){
+        return recess;
     }
+
+//    private String name, course;
+//    private int studentID;
+//
+//    // This is the constructor of the class Student
+//    public Student(String name, String course, int studentID) {
+//
+//        this.name = name;
+//        this.course = course;
+//        this.studentID = studentID;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public String getCourse() {
+//        return course;
+//    }
+//
+//    public int getStudentID(){
+//        return studentID;
+//    }
 }
